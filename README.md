@@ -53,7 +53,7 @@ Refer to [Quick Start 🚀](#quick-start) section to set up the development envi
 1. Make a branch
     * Please create a separate branch for each issue that you're working on. Do not make changes to the default branch (e.g. master, develop) of your fork.
 1. Describe Your Pull Request
-    * Use the template provided [here](.github/PULL_REQUEST.md)
+    * Use the template provided [here](.github/PULL_REQUEST_TEMPLATE.md)
     * Use the format specified in pull request template for the repository. Populate the stencil completely for maximum verbosity.
       * Tag the actual issue number by replacing #[issue_number] e.g. #42. This closes the issue when your PR is merged.
       * Tag the actual issue author by replacing @[author] e.g. @issue_author. This brings the reporter of the issue into the conversation.
