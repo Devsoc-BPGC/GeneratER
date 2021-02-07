@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { SidebarProvider } from "./SidebarProvider";
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext): void {
   const sidebarProvider = new SidebarProvider(context.extensionUri);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(
@@ -17,4 +17,6 @@ export function activate(context: vscode.ExtensionContext) {
   );
 }
 
-export function deactivate() {}
+export function deactivate(): void {
+  // This method is called when your extension is deactivated.
+}
