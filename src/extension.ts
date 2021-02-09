@@ -1,4 +1,6 @@
 import * as vscode from "vscode";
+import { ActionsList, actionsList } from "./actions";
+import { CommandCallback } from "./actions/AbstractAction";
 import { SidebarProvider } from "./SidebarProvider";
 
 export function activate(context: vscode.ExtensionContext): void {
@@ -10,6 +12,8 @@ export function activate(context: vscode.ExtensionContext): void {
     )
   );
 
+  addCommand(context, 'extension.testAction');
+
   context.subscriptions.push(
     vscode.commands.registerCommand("extension.helloWorld", () => {
       vscode.window.showInformationMessage("Hello World from Extension!");
@@ -18,5 +22,17 @@ export function activate(context: vscode.ExtensionContext): void {
 }
 
 export function deactivate(): void {
-  // This method is called when your extension is deactivated.
+  // This method is called when your extension is deactivated
+}
+
+function addCommand(context: vscode.ExtensionContext, name: keyof ActionsList) {
+  // const func = getCommandFunction(name);
+  const command = vscode.commands.registerCommand(name as string, getCommandFunction(name));
+  context.subscriptions.push(command);
+}
+
+function getCommandFunction(name: keyof ActionsList): CommandCallback {
+  const actionClass = actionsList[name];
+  const actionObject = new actionClass();
+  return actionObject.execution;
 }
