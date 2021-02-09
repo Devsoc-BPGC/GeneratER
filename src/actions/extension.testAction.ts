@@ -1,8 +1,7 @@
 import * as vscode from 'vscode';
-import { AbstractAction } from './AbstractAction';
 
-export class TestAction extends AbstractAction {
-  execution() {
+export class TestAction {
+  execution(): void {
     vscode.window.showInformationMessage('Test Action Success');
   }
 }
