@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { MainController } from "./actions/MainController";
+import { MainController } from "./controllers/MainController";
 import { SidebarProvider } from "./SidebarProvider";
 
 export function activate(context: vscode.ExtensionContext): void {
