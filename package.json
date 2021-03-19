@@ -65,6 +65,7 @@
     "@tsconfig/svelte": "^1.0.10",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
+    "@types/mysql": "^2.15.17",
     "@types/node": "^12.11.7",
     "@types/pg": "^7.14.9",
     "@types/vscode": "^1.52.0",
@@ -81,7 +82,7 @@
     "svelte-check": "^1.1.31",
     "svelte-preprocess": "^4.6.5",
     "ts-loader": "^8.0.11",
-    "typescript": "^4.1.2",
+    "typescript": "^4.1.5",
     "vscode-test": "^1.4.1",
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0"
@@ -89,6 +90,8 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "inversify": "^5.0.5",
+    "linter": "0.0.7",
+    "mysql": "^2.18.1",
     "pg": "^8.5.1"
   }
 }
